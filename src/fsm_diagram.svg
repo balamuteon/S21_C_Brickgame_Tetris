@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="641pt" height="450pt" viewBox="0.00 0.00 640.72 450.40">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 446.4)">
+<title>TetrisFSM</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-446.4 636.72,-446.4 636.72,4 -4,4"/>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="lightblue" stroke="black" d="M438.7,-442.4C438.7,-442.4 324.58,-442.4 324.58,-442.4 318.58,-442.4 312.58,-436.4 312.58,-430.4 312.58,-430.4 312.58,-412.8 312.58,-412.8 312.58,-406.8 318.58,-400.8 324.58,-400.8 324.58,-400.8 438.7,-400.8 438.7,-400.8 444.7,-400.8 450.7,-406.8 450.7,-412.8 450.7,-412.8 450.7,-430.4 450.7,-430.4 450.7,-436.4 444.7,-442.4 438.7,-442.4"/>
+<text text-anchor="middle" x="381.64" y="-425.8" font-family="Helvetica,sans-Serif" font-size="14.00">Старт</text>
+<text text-anchor="middle" x="381.64" y="-409" font-family="Helvetica,sans-Serif" font-size="14.00">(Ожидание начала)</text>
+</g>
+<!-- Spawn -->
+<g id="node2" class="node">
+<title>Spawn</title>
+<path fill="lightgrey" stroke="black" d="M443.76,-340.8C443.76,-340.8 319.51,-340.8 319.51,-340.8 313.51,-340.8 307.51,-334.8 307.51,-328.8 307.51,-328.8 307.51,-316.8 307.51,-316.8 307.51,-310.8 313.51,-304.8 319.51,-304.8 319.51,-304.8 443.76,-304.8 443.76,-304.8 449.76,-304.8 455.76,-310.8 455.76,-316.8 455.76,-316.8 455.76,-328.8 455.76,-328.8 455.76,-334.8 449.76,-340.8 443.76,-340.8"/>
+<text text-anchor="middle" x="381.64" y="-318.6" font-family="Helvetica,sans-Serif" font-size="14.00">Спавн новой фигуры</text>
+</g>
+<!-- Start&#45;&gt;Spawn -->
+<g id="edge1" class="edge">
+<title>Start-&gt;Spawn</title>
+<path fill="none" stroke="black" d="M381.64,-400.54C381.64,-386.6 381.64,-367.81 381.64,-352.31"/>
+<polygon fill="black" stroke="black" points="385.14,-352.75 381.64,-342.75 378.14,-352.75 385.14,-352.75"/>
+<text text-anchor="middle" x="425.55" y="-373.8" font-family="Helvetica,sans-Serif" font-size="10.00">Нажатие 'Enter'</text>
+<text text-anchor="middle" x="425.55" y="-361.8" font-family="Helvetica,sans-Serif" font-size="10.00">(apply_user_action)</text>
+</g>
+<!-- Moving -->
+<g id="node3" class="node">
+<title>Moving</title>
+<path fill="lightgrey" stroke="black" d="M299.37,-244.8C299.37,-244.8 161.91,-244.8 161.91,-244.8 155.91,-244.8 149.91,-238.8 149.91,-232.8 149.91,-232.8 149.91,-215.2 149.91,-215.2 149.91,-209.2 155.91,-203.2 161.91,-203.2 161.91,-203.2 299.37,-203.2 299.37,-203.2 305.37,-203.2 311.37,-209.2 311.37,-215.2 311.37,-215.2 311.37,-232.8 311.37,-232.8 311.37,-238.8 305.37,-244.8 299.37,-244.8"/>
+<text text-anchor="middle" x="230.64" y="-228.2" font-family="Helvetica,sans-Serif" font-size="14.00">Движение</text>
+<text text-anchor="middle" x="230.64" y="-211.4" font-family="Helvetica,sans-Serif" font-size="14.00">(Управление игроком)</text>
+</g>
+<!-- Spawn&#45;&gt;Moving -->
+<g id="edge2" class="edge">
+<title>Spawn-&gt;Moving</title>
+<path fill="none" stroke="black" d="M307.09,-305.25C294.86,-300.52 282.84,-294.49 272.58,-286.8 261.53,-278.53 252.42,-266.46 245.55,-255.17"/>
+<polygon fill="black" stroke="black" points="248.59,-253.45 240.62,-246.48 242.5,-256.9 248.59,-253.45"/>
+<text text-anchor="middle" x="320.11" y="-277.8" font-family="Helvetica,sans-Serif" font-size="10.00">Спавн успешен</text>
+<text text-anchor="middle" x="320.11" y="-265.8" font-family="Helvetica,sans-Serif" font-size="10.00">(update_game_state)</text>
+</g>
+<!-- GameOver -->
+<g id="node6" class="node">
+<title>GameOver</title>
+<path fill="lightcoral" stroke="black" d="M472.26,-140.4C472.26,-140.4 383.02,-140.4 383.02,-140.4 377.02,-140.4 371.02,-134.4 371.02,-128.4 371.02,-128.4 371.02,-116.4 371.02,-116.4 371.02,-110.4 377.02,-104.4 383.02,-104.4 383.02,-104.4 472.26,-104.4 472.26,-104.4 478.26,-104.4 484.26,-110.4 484.26,-116.4 484.26,-116.4 484.26,-128.4 484.26,-128.4 484.26,-134.4 478.26,-140.4 472.26,-140.4"/>
+<text text-anchor="middle" x="427.64" y="-118.2" font-family="Helvetica,sans-Serif" font-size="14.00">Игра окончена</text>
+</g>
+<!-- Spawn&#45;&gt;GameOver -->
+<g id="edge3" class="edge">
+<title>Spawn-&gt;GameOver</title>
+<path fill="none" stroke="black" d="M382.3,-304.66C383.5,-281.36 386.84,-238.57 395.84,-203.2 400.4,-185.29 407.99,-166.02 414.62,-150.9"/>
+<polygon fill="black" stroke="black" points="417.67,-152.64 418.59,-142.09 411.29,-149.77 417.67,-152.64"/>
+<text text-anchor="middle" x="447.24" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">Нет места для спавна</text>
+<text text-anchor="middle" x="447.24" y="-215" font-family="Helvetica,sans-Serif" font-size="10.00">(update_game_state)</text>
+</g>
+<!-- Shifting -->
+<g id="node4" class="node">
+<title>Shifting</title>
+<path fill="lightgrey" stroke="black" d="M182.93,-143.2C182.93,-143.2 14.35,-143.2 14.35,-143.2 8.35,-143.2 2.35,-137.2 2.35,-131.2 2.35,-131.2 2.35,-113.6 2.35,-113.6 2.35,-107.6 8.35,-101.6 14.35,-101.6 14.35,-101.6 182.93,-101.6 182.93,-101.6 188.93,-101.6 194.93,-107.6 194.93,-113.6 194.93,-113.6 194.93,-131.2 194.93,-131.2 194.93,-137.2 188.93,-143.2 182.93,-143.2"/>
+<text text-anchor="middle" x="98.64" y="-126.6" font-family="Helvetica,sans-Serif" font-size="14.00">Сдвиг вниз</text>
+<text text-anchor="middle" x="98.64" y="-109.8" font-family="Helvetica,sans-Serif" font-size="14.00">(Автоматическое падение)</text>
+</g>
+<!-- Moving&#45;&gt;Shifting -->
+<g id="edge4" class="edge">
+<title>Moving-&gt;Shifting</title>
+<path fill="none" stroke="black" d="M149.68,-220.13C92.91,-216.22 24,-206.98 5.58,-185.2 -6.64,-170.76 3.95,-158.36 21.75,-148.53"/>
+<polygon fill="black" stroke="black" points="22.87,-151.88 30.27,-144.3 19.76,-145.61 22.87,-151.88"/>
+<text text-anchor="middle" x="53.11" y="-176.2" font-family="Helvetica,sans-Serif" font-size="10.00">Сработал таймер</text>
+<text text-anchor="middle" x="53.11" y="-164.2" font-family="Helvetica,sans-Serif" font-size="10.00">(update_game_state)</text>
+</g>
+<!-- Attaching -->
+<g id="node5" class="node">
+<title>Attaching</title>
+<path fill="lightgrey" stroke="black" d="M297.43,-41.6C297.43,-41.6 163.85,-41.6 163.85,-41.6 157.85,-41.6 151.85,-35.6 151.85,-29.6 151.85,-29.6 151.85,-12 151.85,-12 151.85,-6 157.85,0 163.85,0 163.85,0 297.43,0 297.43,0 303.43,0 309.43,-6 309.43,-12 309.43,-12 309.43,-29.6 309.43,-29.6 309.43,-35.6 303.43,-41.6 297.43,-41.6"/>
+<text text-anchor="middle" x="230.64" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00">Присоединение</text>
+<text text-anchor="middle" x="230.64" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00">(Фиксация и подсчет)</text>
+</g>
+<!-- Moving&#45;&gt;Attaching -->
+<g id="edge5" class="edge">
+<title>Moving-&gt;Attaching</title>
+<path fill="none" stroke="black" d="M230.64,-202.97C230.64,-167.96 230.64,-95.38 230.64,-53.49"/>
+<polygon fill="black" stroke="black" points="234.14,-53.56 230.64,-43.56 227.14,-53.56 234.14,-53.56"/>
+<text text-anchor="middle" x="291.76" y="-125.4" font-family="Helvetica,sans-Serif" font-size="10.00">Hard Drop (вниз до упора)</text>
+<text text-anchor="middle" x="291.76" y="-113.4" font-family="Helvetica,sans-Serif" font-size="10.00">(apply_user_action)</text>
+</g>
+<!-- Moving&#45;&gt;GameOver -->
+<g id="edge9" class="edge">
+<title>Moving-&gt;GameOver</title>
+<path fill="none" stroke="black" d="M241.79,-202.76C250.41,-188.99 263.59,-171.47 279.81,-161.2 309.44,-142.44 322.67,-151.91 356.64,-143.2 357.64,-142.94 358.65,-142.68 359.67,-142.42"/>
+<polygon fill="black" stroke="black" points="360.49,-145.82 369.27,-139.88 358.7,-139.05 360.49,-145.82"/>
+<text text-anchor="middle" x="323.73" y="-176.2" font-family="Helvetica,sans-Serif" font-size="10.00">Нажатие 'q'</text>
+<text text-anchor="middle" x="323.73" y="-164.2" font-family="Helvetica,sans-Serif" font-size="10.00">(apply_user_action)</text>
+</g>
+<!-- Shifting&#45;&gt;Moving -->
+<g id="edge6" class="edge">
+<title>Shifting-&gt;Moving</title>
+<path fill="none" stroke="black" d="M102.4,-143.65C105.86,-157.07 112.28,-174.16 123.85,-185.2 128.64,-189.77 134.01,-193.78 139.73,-197.32"/>
+<polygon fill="black" stroke="black" points="137.88,-200.3 148.32,-202.09 141.28,-194.18 137.88,-200.3"/>
+<text text-anchor="middle" x="170.24" y="-176.2" font-family="Helvetica,sans-Serif" font-size="10.00">Падение успешно</text>
+<text text-anchor="middle" x="170.24" y="-164.2" font-family="Helvetica,sans-Serif" font-size="10.00">(нет столкновения)</text>
+</g>
+<!-- Shifting&#45;&gt;Attaching -->
+<g id="edge7" class="edge">
+<title>Shifting-&gt;Attaching</title>
+<path fill="none" stroke="black" d="M98.73,-101.23C99.85,-87.85 103.45,-70.76 113.84,-59.6 121.46,-51.41 130.87,-44.99 141.01,-39.96"/>
+<polygon fill="black" stroke="black" points="142.25,-43.24 149.98,-35.98 139.42,-36.84 142.25,-43.24"/>
+<text text-anchor="middle" x="165.24" y="-74.6" font-family="Helvetica,sans-Serif" font-size="10.00">Фигура приземлилась</text>
+<text text-anchor="middle" x="165.24" y="-62.6" font-family="Helvetica,sans-Serif" font-size="10.00">(есть столкновение)</text>
+</g>
+<!-- Attaching&#45;&gt;Spawn -->
+<g id="edge8" class="edge">
+<title>Attaching-&gt;Spawn</title>
+<path fill="none" stroke="black" d="M309.86,-35.52C378.68,-49.19 470.81,-72.35 493.64,-101.6 518.57,-133.54 511.93,-220.14 498.64,-244.8 485.57,-269.04 461.17,-286.9 438.02,-299.28"/>
+<polygon fill="black" stroke="black" points="436.56,-296.1 429.22,-303.74 439.72,-302.35 436.56,-296.1"/>
+<text text-anchor="middle" x="571.6" y="-176.2" font-family="Helvetica,sans-Serif" font-size="10.00">Подсчет очков и</text>
+<text text-anchor="middle" x="571.6" y="-164.2" font-family="Helvetica,sans-Serif" font-size="10.00">очистка линий завершены</text>
+</g>
+</g>
+</svg>
